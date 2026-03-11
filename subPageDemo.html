@@ -4,14 +4,30 @@
         <title>find my seven pages</title>
     </head>
 
-    <section>
-        <h1>You found the second page</h1>
-        <a href = "demo.html"> return</a>
-    </section>
+    <body style="
+        background-image: url('./assets/images/asphalt.webp');
+        background-size: 800px;
+        background-repeat: repeat;
+    ">
 
-    <!--
-        How to add audio for future reference
-        <p><audio src="fileName.mp3" controls type="audio/mp3"*</audio></p>
-    -->
+        <audio controls loop>
+            <source src="./assets/audio/Mus_star_music.ogg" type="audio/ogg">
+        </audio>
 
+        <section>
+            <h1 style="color: white;">You found the second page</h1>
+            <a href="demo.html" style="color: white;">return</a>
+        </section>
+
+        
+        <button onClick = "onButtonClick()" style = "font-size:5px"> another passage? </button>
+
+        <script>
+            function onButtonClick(){
+                window.location.href = "subSubPage.html";
+            }
+
+        </script>
+
+    </body>
 </html>
