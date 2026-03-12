@@ -1,0 +1,12 @@
+body{
+	background-color: #AAAA00;
+	margin: auto;
+	text-align: center;
+	color: white;
+}
+
+ol{
+	margin: auto;
+	display: inline-block;
+	text-align: center;
+}
