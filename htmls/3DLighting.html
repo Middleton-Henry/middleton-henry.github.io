@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3-D Lighting</title>
+        <link rel = "stylesheet" type = "text/css" href = "../css/webPage.css">
+    </head>
+
+    <body>
+
+        <a href = "webPage.html" class="return-btn">return</a>
+
+        <section>
+            <h1>Physically Based Rendering (PBR)</h1>
+                <p> PBR is the current standard for how to calculate 3-D lighting and how to render 3-D scenes<br>This system is on creating an accurate reflection for how actually look without having to rely on expensive algorithms/systems like raytracing</p>
+
+                <h2>Standard Surface properties:</h2><ul>
+                    <li>Albedo (texture) – The color of a surface</li>
+                    <li>Normal Map (texture) – The direction of a surface (used to create bumps and other sub vertex details)</li>
+                    <li>Roughness (greyscale texture) – How shiny or diffuse a surface is</li>
+                    <li>Smoothness (float) – The strength of the Roughness texture</li>
+                </ul>
+
+                <h2>Additional Surface Properties:</h2><ul>
+                    <li>Metallic (texture) – Alternative system to roughness that only applies to glossy calculations and ignores diffusion</li>
+                    <li>Ambient Occlusion (greyscale texture) – Used to mark crevices of a surface to make them darker (typically baked into the Abedo)</li>
+                    <li>Height Map (greyscale texture) – Greyscale image that marks the height of a pixel from its surface (typically baked into the Normal Map)</li>
+                </ul>
+
+            <p>For more information on textures and other parameters visit <a href = "shaderComponents.html"> Shader Components</a> </p>
+            
+        </section>
+
+        <section>
+            <h1>Standard Lighting Formulae</h1>
+                <p>NdotL – How closely a pixel’s normal faces towards a light (from 0 to 1)</p>
+                <pre><code>
+                float NdotL = saturate(dot(normalWS, mainLight.direction));
+                </pre></code>
+                
+
+                <h2>Lambertian Diffusion</h2>
+                <p> Soft surface lighting </p>
+                    <pre><code>
+                    floats viewDir = GetWorldSpaceNormalizeViewDir(positionws);
+                    floats reflectDir = reflect(-mainLight.direction, normalws);
+                    float spec = pow(max(dot (viewDir, reflectDir), 0.0), _Shininess);
+                    half3 specular = spec * mainLight.color * _SpecularStrength;
+                    </code></pre>
+                
+
+                <h2>Phong Specular</h2>
+                <p> Bright glossy lighting </p>
+                <pre><code>
+                    half3 diffuse = NdotL * mainLight.shadowAttenuation * albedo * mainLight.color;
+                </code></pre>
+
+                <img src = "../assets/images/lighting.png" class="centered-img">
+
+
+            <br>
+            <br>
+            <p>Check here for some <a href = "additionalFormulae.html">additional formulae</a></p>
+
+        </section>
+        
+
+    </body>
+</html>

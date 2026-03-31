@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Additional Formulae</title>
+        <link rel = "stylesheet" type = "text/css" href = "../css/webPage.css">
+    </head>
+
+    <body>
+
+        <a href = "webPage.html" class="return-btn">return</a>
+
+        <section>
+            <h1>Additional Formulae</h1>
+
+            <h2>Fresnel</h2>
+                <p> Alignment of a pixel's direction toward the camera </p>
+                <pre><code>
+                float3 viewDir = GetWorldSpaceNormalizeViewDir(positionWS);
+                float fresnel = 1.0 - saturate(dot(normalWS, viewDir));
+                </pre></code>
+
+            <h2>Posterize / Quantize</h2>
+                <p> Limits the number of unique values  </p>
+                <pre><code>
+                float posterize(float value, float steps) {
+                    return floor(value * steps) / steps;
+                }
+                </pre></code>
+        </section>
+
+        
+
+    </body>
+</html>

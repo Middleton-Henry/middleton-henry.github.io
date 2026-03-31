@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shaders Components</title>
+        <link rel = "stylesheet" type = "text/css" href = "../css/webPage.css">
+    </head>
+
+    <body>
+
+        <a href = "webPage.html" class="return-btn">return</a>
+
+        <section>
+            <h1>Parameters</h1>
+                <p>Distinct input variables (defined in script or editor view)<br>
+                Editor values should be added in shader header<br>
+                All variable input values must be declared in CBUFFER<br>
+                Parameters are conventionally prefaced with an '_'</p>
+                <h2>Data Types</h2>
+                
+                <ul><li>Float/Half – Floating decimal value (32 bit / 16 bit)</li>
+                    <li>Int – Integer value; non-negative whole number (32 bit)</li>
+                    <li>Color – 4D Vector representing a color in RGBA decimal format (128 bit)</li>
+                    <li>2D Texture – Image that can be sampled within shader</li></ul>
+                
+
+            
+        </section>
+
+        <section>
+            <h1>Functions</h1>
+                <h2>Vertex</h2>
+                    <p>Runs per each vertex<br>
+                    Transforms vertex position to clip space<br>
+                    Allows for vertex displace and manipulation</p>
+                <h2>Fragment</h2>
+                    <p>Runs per each pixel<br>
+                    Calculates the final pixel color<br>
+                    Function for calculating all <a href = "3DLighting.html"> lighting</a> and texture sampling</p>
+            
+        </section>
+
+    </body>
+</html>
