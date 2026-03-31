@@ -34,17 +34,17 @@
             <h1>Standard Lighting Formulae</h1>
                 <p>NdotL – How closely a pixel’s normal faces towards a light (from 0 to 1)</p>
                 <pre><code>
-                float NdotL = saturate(dot(normalWS, mainLight.direction));
+                floats viewDir = GetWorldSpaceNormalizeViewDir(positionws);
+                floats reflectDir = reflect(-mainLight.direction, normalws);
+                float spec = pow(max(dot (viewDir, reflectDir), 0.0), _Shininess);
+                half3 specular = spec * mainLight.color * _SpecularStrength;
                 </pre></code>
                 
 
                 <h2>Lambertian Diffusion</h2>
                 <p> Soft surface lighting </p>
                     <pre><code>
-                    floats viewDir = GetWorldSpaceNormalizeViewDir(positionws);
-                    floats reflectDir = reflect(-mainLight.direction, normalws);
-                    float spec = pow(max(dot (viewDir, reflectDir), 0.0), _Shininess);
-                    half3 specular = spec * mainLight.color * _SpecularStrength;
+                    float NdotL = saturate(dot(normalWS, mainLight.direction));
                     </code></pre>
                 
 
