@@ -34,24 +34,24 @@
             <h1>Standard Lighting Formulae</h1>
                 <p>NdotL – How closely a pixel’s normal faces towards a light (from 0 to 1)</p>
                 <pre><code>
-                floats viewDir = GetWorldSpaceNormalizeViewDir(positionws);
-                floats reflectDir = reflect(-mainLight.direction, normalws);
-                float spec = pow(max(dot (viewDir, reflectDir), 0.0), _Shininess);
-                half3 specular = spec * mainLight.color * _SpecularStrength;
+                float NdotL = saturate(dot(normalWS, mainLight.direction));
                 </pre></code>
                 
 
                 <h2>Lambertian Diffusion</h2>
                 <p> Soft surface lighting </p>
-                    <pre><code>
-                    float NdotL = saturate(dot(normalWS, mainLight.direction));
-                    </code></pre>
+                <pre><code>
+                half3 diffuse = NdotL * mainLight.shadowAttenuation * albedo * mainLight.color;
+                </code></pre>
                 
 
                 <h2>Phong Specular</h2>
                 <p> Bright glossy lighting </p>
                 <pre><code>
-                    half3 diffuse = NdotL * mainLight.shadowAttenuation * albedo * mainLight.color;
+                floats viewDir = GetWorldSpaceNormalizeViewDir(positionws);
+                floats reflectDir = reflect(-mainLight.direction, normalws);
+                float spec = pow(max(dot (viewDir, reflectDir), 0.0), _Shininess);
+                half3 specular = spec * mainLight.color * _SpecularStrength;
                 </code></pre>
 
                 <img src = "../assets/images/lighting.png" class="centered-img">
