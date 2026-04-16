@@ -136,9 +136,9 @@
                         {
                             float2 neighbor = float2(x, y);
 
-                            float2 point = hash2(i + neighbor);
+                            float2 pos = hash2(i + neighbor);
 
-                            float2 diff = neighbor + point - f;
+                            float2 diff = neighbor + pos - f;
 
                             float dist = length(diff);
 
