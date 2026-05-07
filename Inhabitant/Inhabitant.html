@@ -324,6 +324,15 @@ There is a cat here
     	&lt;img src=&quot;https://middleton-henry.github.io/Inhabitant/Map/mapSketch.jpeg&quot; style=&quot;max-width:100%; margin-top:5px;&quot;&gt;
         &lt;div class=&quot;centered-image&quot;&gt;
           &lt;img src=&quot;https://middleton-henry.github.io/Inhabitant/Map/mapSketch.jpeg&quot; style=&quot;max-width:100%; margin-top:5px;&quot;&gt;
+          &lt;&lt;button &quot;Reset Game&quot;&gt;&gt;
+	&lt;&lt;script&gt;&gt;
+		if (confirm(&quot;Reset all progress?&quot;)) {
+			Save.clear();
+			State.reset();
+			window.location.reload();
+		}
+	&lt;&lt;/script&gt;&gt;
+&lt;&lt;/button&gt;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Go north" tags="" position="0,925" size="100,100">There is nothing here
