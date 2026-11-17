@@ -1,0 +1,2 @@
+document.addEventListener(`DOMContentLoaded`,()=>{document.querySelectorAll(`a[data-back-to]`).forEach(e=>{e.addEventListener(`click`,t=>{let n=e.dataset.backTo;n&&document.referrer.includes(n)&&(t.preventDefault(),history.back())})})});
+//# sourceMappingURL=back-link-Co5wQpVb.js.map
