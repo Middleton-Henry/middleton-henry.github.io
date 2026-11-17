@@ -16,4 +16,4 @@
         </div>
       </header>
     `,this.querySelectorAll(`button`).forEach(e=>{e.addEventListener(`click`,()=>{let t=e.getAttribute(`data-href`);t&&(window.location.href=t)})})}};customElements.get(`app-header`)||customElements.define(`app-header`,r);
-//# sourceMappingURL=app-header-CiYRSrHI.js.map
+//# sourceMappingURL=app-header-1o4-jbM1.js.map
