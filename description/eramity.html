@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Lord ERAMITY - Description / BTS</title>
+
+    <!-- Powers the Fullscreen button on the main video (needs the .animations-viewer class below) -->
+    <!-- Builds the .model-embed viewers in the modelling section -->
+  <script type="module" crossorigin src="../assets/description-eramity-C_yk_i9i.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/app-header-CiYRSrHI.js">
+  <link rel="modulepreload" crossorigin href="../assets/back-link-Co5wQpVb.js">
+  <link rel="modulepreload" crossorigin href="../assets/description-C_9yLn8S.js">
+  <link rel="modulepreload" crossorigin href="../assets/animations-C1sSx9gf.js">
+  <link rel="modulepreload" crossorigin href="../assets/ModelPanel-BpfX9Rrw.js">
+  <link rel="stylesheet" crossorigin href="../assets/app-header-BM3f75KN.css">
+</head>
+
+<body>
+    <app-header></app-header>
+
+    <!-- .animations-viewer gives the main video the same frame, sizing and fullscreen styles as animations.html -->
+    <div class="animation-description animations-viewer">
+
+        <a class="btn" href="/animations.html" data-back-to="animations.html">← Back to animations</a>
+
+        <!-- Main video -->
+        <div class="media-focus">
+            <div class="media-frame">
+                <iframe
+                    src="https://player.vimeo.com/video/1247320652?autopause=0"
+                    title="Lord ERAM Short"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="media-actions">
+                <button class="fullscreen-btn btn" type="button" aria-label="Enter fullscreen">
+                    ⛶ Fullscreen
+                </button>
+            </div>
+        </div>
+
+        <!-- Script -->
+        <section class="description-section">
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="script-dropdown">
+                Script
+            </button>
+
+            <div class="description-dropdown stack" id="script-dropdown" hidden>
+                <p>
+                    The production process began with writing a script in KIT Scenarist.
+                    Both the lyrics and the overall video are a parody of
+                    <a href="https://youtu.be/lhCPiauHI-g?t=86" target="_blank" rel="noopener noreferrer">'Lord Verity'</a>
+                    (1:26-1:56) by Horror Skunx, reimagined with characters from
+                    <a href="https://deltarune.com" target="_blank" rel="noopener noreferrer">DELTARUNE</a>
+                    by Toby Fox.
+                </p>
+
+                <p>
+                    For this adaptation, I rewrote the lyrics around ERAM, drawing on dialogue,
+                    character interactions, and narrative themes from the game. The goal was
+                    to preserve the structure and tone of the original while reframing it
+                    through ERAM's perspective.
+                </p>
+
+                <p>Kris' voice was performed by me<br>ERAM is voiced by <a href="https://greenscarybutterfly.neocities.org/visual-art">Jade Siproeta</a></p>
+
+
+                
+
+                <iframe
+                    class="pdf-embed"
+                    src="/public/pdfs/ERAMITY-script.pdf"
+                    title="Lord ERAMITY script (PDF)"
+                    loading="lazy">
+                </iframe>
+
+                <div class="media-actions">
+                    <a class="btn" href="/public/pdfs/ERAMITY-script.pdf" target="_blank" rel="noopener noreferrer">
+                        Open script in a new tab
+                    </a>
+                </div>
+
+                <p>
+                    Some dialogue was revised during production to better accommodate the
+                    animation's pacing and maintain consistency with the characters'
+                    personalities.
+                </p>
+            </div>
+        </section>
+
+        <!-- Modelling and rigging -->
+        <section class="description-section">
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="modeling-dropdown">
+                Character Modelling and Rigging
+            </button>
+
+            <div class="description-dropdown stack" id="modeling-dropdown" hidden>
+
+                <p class="description-note">
+                    DELTARUNE and its characters are the property of Toby Fox.
+                    The 3D models and adaptations presented below are my own fan work.
+                    The accompanying sprites and illustrations are existing reference
+                    materials by the credited artists.
+                </p>
+
+                <!-- One <article class="shot"> per character. Copy a block to add more.
+                     data-model must match a model's name in modelConfig.ts; the viewer
+                     loads the first time this section is opened. -->
+
+                <!-- Kris -->
+                <article class="shot">
+                    <h3>Kris</h3>
+
+                    <p>
+                        Kris was relatively straightforward to translate into 3D, thanks to
+                        the amount of detail available in their official artwork. I used the
+                        existing illustrations and in-game sprites as references to establish
+                        the model's proportions, silhouette, clothing, and overall appearance.
+                    </p>
+
+                    <p>
+                        The more challenging aspects came from adapting the design for animation.
+                        I added additional bones to the rig to give the mantle more flexibility
+                        and allow for more expressive movement. I also created hidden
+                        shadow-casting geometry to preserve the intended facial shadows,
+                        helping maintain Kris's recognizable appearance under different
+                        lighting conditions.
+                    </p>
+
+                    <div class="model-showcase">
+                        <div class="model-refs">
+                            <figure class="shot-figure">
+                                <img
+                                    class="pixelated"
+                                    src="data:image/png;base64,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"
+                                    alt="In-game sprite of Kris drawn by Temmie Chang"
+                                    loading="lazy"
+                                    decoding="async">
+                                <figcaption>Reference: in-game sprite by Temmie Chang</figcaption>
+                            </figure>
+
+                            <figure class="shot-figure">
+                                <img
+                                    src="../assets/krisArt-qE4ZXdC-.png"
+                                    alt="Album artwork of Kris painted by Marcel Mosqi"
+                                    loading="lazy"
+                                    decoding="async">
+                                <figcaption>Reference: album artwork by Marcel Mosqi</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="model-embed" data-model="Kris"></div>
+                    </div>
+                </article>
+
+                <!-- ERAM -->
+                <article class="shot">
+                    <h3>ERAM</h3>
+
+                    <p>
+                        Unlike Kris, ERAM has relatively little visual detail in the available
+                        sprites, leaving considerably more room for interpretation. Rather
+                        than relying entirely on the limited reference material, I used the
+                        character's narrative role and visual parallels within DELTARUNE
+                        to guide the design.
+                    </p>
+
+                    <p>
+                        ERAM frequently mirrors Ralsei, whose character design draws heavily
+                        on traditional goat-like imagery. I expanded on this resemblance by
+                        pushing ERAM toward a more Krampus-inspired appearance, emphasizing
+                        elongated horns, pronounced hooves, digitigrade legs, and a deliberately
+                        tattered robe.
+                    </p>
+
+                    <p>
+                        This also creates a visual contrast with Ralsei. Where Ralsei has a
+                        more human-like silhouette and a neat, formal robe, ERAM's exaggerated
+                        animal features and disheveled clothing give him a more imposing and
+                        unsettling presence. 
+                    </p>
+                    
+
+                    <div class="model-showcase">
+                        <div class="model-refs">
+                            <figure class="shot-figure">
+                                <img
+                                    class="pixelated"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATwAAAE8CAMAAABq2/00AAAAjVBMVEUqKirSXB5IHQorEAWgRBcYGBgTCAPAwMBUIgv/dSc5GAjs7OwAAAAeDASurq6rq6vuYyEkDgXd3d2cnJy8UBvR0dGTk5NYWFgdHR3Ly8tPT08RERHFUxuOPBR1dXWXPhWkpKTyZSLYWh5dXV3///8xEwaGhob+bCT5+flISEioSxk/Pz91MRA2NjZra2vR2JObAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEOUlEQVR42u3cUVfaWBSAUZwKVKFQoWEosRZGkEyr/P+f1zVv0xwXXNMEA+zvmWSduwMvSbidtSrXQQAPHjx4ggcP3pnjFYMQnvU6qhSv4PV3D+UKdkVA2fUjXjEdhuCti6gyLeDBgwcPHjx48ODBgwcPHjx48ODBg3dmeJOUTla4SFpeZbykslPFyyouGB48ePDgwYMHDx48ePDgwYMHDx48ePAuFW89GYXylHPtZk9VmtV2+76oOMAuZXV5VJmsI94rU3WHzTWvD2/e4JjdfWO+G16nPrwOPHjw4MGDBw8ePHjw4MGDBw8evLPBy+HllfF+vpSrb87OZM+GJfuGCodNahwqLPhnVbxXNmSZNniRh9MUvGYneNvGPG/cDml03nijt2nAgwcPHjx48ODBgwcPHjx48ODBg9duvHGToy9TJlg2OcG4UbxsdrjpruKzj0XKe9iLis8idtOE0bNG8dbF4dbjJt+wrth8nDR6s3hJv+124tUfPHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDBw8ePHjw4MGDB+8U8Nr7ZuhJfPNGbcQbtfKb1x+XGj3EF7o3H/8qdVsfzG353B834TP5w6g8Z78FeCnL6/242f7ezdVdXXZ3V+HkP3opB7YAL+U32rvefv697f2nuvA+3YeTX6fgzU8Ib/X/6sYrnRwePHjw4MGDBw8ePHjw4MGDBw8ePHhN4z3ffznY/TO8V/G+b1cH236HBw8ePHjw4MGDBw8ePHjw4MGDBw/e8fF6deH1Lg/v6rbc5joF73oTDry6MLz/GEKrpA4fdwF4zQUPHjx48ODBgwcPHjx48ODBgwcPHjx48ODBgwcPHjx48ODBgwcPHjx48ODBgwevUbzVEWsp3mAS6qbgffsnVJ9VPPe3FLxuXMugUbzRsK42q5p+yJ9Xm9qGGp0I3l19eHfw4MGDBw8ePHjw4MGDBw8ePHjw4KXh1dQF4n242dbUzYeLw+s911bv4vBaGTx48ODBgwcPHjx48ODBgwcPHjx48C4TL77xPDtvvFlccVW8YvFvuZfzxnsJC14UVfHy4cWXV8brwuvCgwcPHjx48ODBgwcPHjx48ODBOybeGt6wm3YnOVuGjnwz9OUxoSPfy86jShbxium7X+VlykOX5buPOS3aiDdNwZvCgwcPHjx48ODBgwcPHjx48ODBgwfPzdA/wVsPvpbrJ92GX5YPy57Cs4/8Kft6uKTNxQcJJ8qewuTdOEHSZcj7e8b886dnWfyzRthrv5v0paqvZZh8Hv9ikaWsruFHjxFv3Ea8MTx48ODBgwcPHjx48ODBgwcPHrxTwMsr4oXj8mPjxQkq4lXfoOHx78Mt4s4j/Xhc/7h4/TDAY5xgskhY3mPlvxJof/DgwYMHT/DgwYMnePDgwYMnePDgwRM8ePDgCR48ePAusV+W8zg+wAmKdQAAAABJRU5ErkJggg=="
+                                    alt="In-game sprite of ERAM drawn by Temmie Chang"
+                                    loading="lazy"
+                                    decoding="async">
+                                <figcaption>Reference: in-game sprite by Temmie Chang</figcaption>
+                            </figure>
+
+                            <figure class="shot-figure">
+                                <img
+                                    src="../assets/eramArt-D8misbgK.jpeg"
+                                    alt="Album artwork of ERAM illustrated by ADE"
+                                    loading="lazy"
+                                    decoding="async">
+                                <figcaption>Reference: album artwork by ADE</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="model-embed" data-model="ERAM"></div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Shaders: one <article class="shot"> per example. Copy a block to add more.
+             Add class="pixelated" to an <img> to keep its pixels crisp (nearest-neighbour). -->
+        <section class="description-section">
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="shaders-dropdown">
+                Shaders and Materials
+            </button>
+
+            <div class="description-dropdown stack" id="shaders-dropdown" hidden>
+
+                <article class="shot">
+                    <h3>Eye Horizon</h3>
+
+                    <p>
+                        The eye horizon effect was created using a procedural shader in Blender.
+                        Rather than modelling and animating individual eye objects, I used
+                        procedural pupils and stretched image masking masking to create the appearance
+                        of eyes opening across the horizon.
+                    </p>
+
+                    <p>
+                        The shader combines procedural shapes with a gradient-based background
+                        to establish the transition between the eyes and the surrounding sky.
+                        This approach allows me to control the appearance, spacing, and overall
+                        composition of the effect through shader parameters, rather than
+                        manually positioning and animating each element.
+                    </p>
+
+                    <p>All lip syncing was done via shapekeys.</p>
+
+                    <div class="shot-media">
+                        <figure>
+                            <img
+                                class="pixelated"
+                                src="../assets/eye-CpynG5fT.gif"
+                                alt="Procedural shader showing eyes opening"
+                                loading="lazy"
+                                decoding="async">
+                            <figcaption>Eyes opening</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img
+                                class="pixelated"
+                                src="../assets/eye2-DivbYvca.gif"
+                                alt="Eyes opening across the horizon with a sky gradient beneath"
+                                loading="lazy"
+                                decoding="async">
+                            <figcaption>Eyes across the horizon with a sky gradient</figcaption>
+                        </figure>
+                    </div>
+
+                    <figure class="shot-figure">
+                        <img
+                            src="../assets/eyeNodesCompressed-DDp1CKk3.jpeg"
+                            alt="Node tree for the eye horizon shader"
+                            loading="lazy"
+                            decoding="async">
+                        <figcaption>Shader node tree</figcaption>
+                    </figure>
+
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Animation: each shot pairs the viewport video with a screenshot -->
+        <section class="description-section">
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="animation-dropdown">
+                Animation
+            </button>
+
+            <div class="description-dropdown stack" id="animation-dropdown" hidden>
+
+                <article class="shot">
+                    <p>
+                        To achieve a more convincing pixel art aesthetic, the entire animation
+                        was rendered using an orthographic camera. Since orthographic projection
+                        removes perspective depth, I recreated the illusion of depth through
+                        scene composition, invisible shadow casters (e.g. sphere in shot 1), 
+                        lattice structures, and object scaling. This allowed
+                        me to retain the flat, graphic appearance of the original game's visual
+                        style while still incorporating dimensional 3D environments with finer control. 
+                        ERAM is heavily associated with CRT retro aesthetic in-game, so I added barrel 
+                        distrotion, chromatic abberation, and bloom to create the impression of watching
+                        the film of a degrading retro tv.
+                    </p>
+
+                    <p>
+                        A major focus of the animation was establishing a visual contrast between
+                        ERAM's otherworldly presence and Kris's relative powerlessness. I used
+                        exaggerated squash and stretch in ERAM's movements, while keeping Kris
+                        and the surrounding scenery comparatively grounded and physically rigid.
+                        This difference in movement helps make ERAM feel less bound by the
+                        physical world, reinforcing his mischievous and supernatural demeanor.
+                    </p>
+
+                    <p>
+                        I also used camera angles and framing to reinforce this power dynamic.
+                        Shots looking down toward Kris emphasize their vulnerability, while
+                        low angle shots looking up at ERAM make him appear more imposing.
+                        This approach also draws from the original 'Lord Verity' music video,
+                        which uses similar framing to establish Lord Verity's dominance over
+                        the other characters. Shots that show both characters at the same 
+                        present ERAM as larger when speaking despite his model and canonical 
+                        size being smaller.
+                    </p>
+
+                    <h3>Shot 1</h3>
+
+                    <div class="shot-media">
+                        <figure>
+                            <video controls preload="metadata" playsinline>
+                                <source src="../assets/shot1-DKM3GU1D.mp4" type="video/mp4">
+                                Your browser can't play this video.
+                                <a href="/public/videos/eram/shot1.mp4">Download it instead</a>.
+                            </video>
+                            <figcaption>Viewport capture</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="../assets/1-D_w4Qg_c.png"
+                                alt="Blender scene setup for shot 1"
+                                loading="lazy"
+                                decoding="async">
+                            <figcaption>Scene setup</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="shot">
+                    <h3>Shot 2</h3>
+
+                    <div class="shot-media">
+                        <figure>
+                            <video controls preload="metadata" playsinline>
+                                <source src="../assets/shot2-Rs_43WXA.mp4" type="video/mp4">
+                                Your browser can't play this video.
+                                <a href="/public/videos/eram/shot2.mp4">Download it instead</a>.
+                            </video>
+                            <figcaption>Viewport capture</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="../assets/2-CzXqX9Uh.png"
+                                alt="Blender scene setup for shot 2"
+                                loading="lazy"
+                                decoding="async">
+                            <figcaption>Scene setup</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="shot">
+                    <h3>Shot 3</h3>
+
+                    <div class="shot-media">
+                        <figure>
+                            <video controls preload="metadata" playsinline>
+                                <source src="../assets/shot3-BfMMonYk.mp4" type="video/mp4">
+                                Your browser can't play this video.
+                                <a href="/public/videos/eram/shot3.mp4">Download it instead</a>.
+                            </video>
+                            <figcaption>Viewport capture</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="../assets/3-C-pkNsXj.png"
+                                alt="Blender scene setup for shot 3"
+                                loading="lazy"
+                                decoding="async">
+                            <figcaption>Scene setup</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="shot">
+                    <h3>Shot 4</h3>
+
+                    <div class="shot-media">
+                        <figure>
+                            <video controls preload="metadata" playsinline>
+                                <source src="../assets/shot4-DV6Ua_IP.mp4" type="video/mp4">
+                                Your browser can't play this video.
+                                <a href="/public/videos/eram/shot4.mp4">Download it instead</a>.
+                            </video>
+                            <figcaption>Viewport capture</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="../assets/4-Bybv1Bgf.png"
+                                alt="Blender scene setup for shot 4"
+                                loading="lazy"
+                                decoding="async">
+                            <figcaption>Scene setup</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="shot">
+                    <h3>Shot 5</h3>
+
+                    <div class="shot-media">
+                        <figure>
+                            <video controls preload="metadata" playsinline>
+                                <source src="../assets/shot5-BXj5Jjji.mp4" type="video/mp4">
+                                Your browser can't play this video.
+                                <a href="/public/videos/eram/shot5.mp4">Download it instead</a>.
+                            </video>
+                            <figcaption>Viewport capture</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="../assets/5-BzM8JRMt.png"
+                                alt="Blender scene setup for shot 5"
+                                loading="lazy"
+                                decoding="async">
+                            <figcaption>Scene setup</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="shot">
+                    <h3>Shot 6</h3>
+
+                    <div class="shot-media">
+                        <figure>
+                            <video controls preload="metadata" playsinline>
+                                <source src="../assets/shot6-CHiKjs3E.mp4" type="video/mp4">
+                                Your browser can't play this video.
+                                <a href="/public/videos/eram/shot6.mp4">Download it instead</a>.
+                            </video>
+                            <figcaption>Viewport capture</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="../assets/6-6M7tRnzh.png"
+                                alt="Blender scene setup for shot 6"
+                                loading="lazy"
+                                decoding="async">
+                            <figcaption>Scene setup</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="shot">
+                    <h3>Shot 7</h3>
+
+                    <div class="shot-media">
+                        <figure>
+                            <video controls preload="metadata" playsinline>
+                                <source src="../assets/shot7-BfhHJyAj.mp4" type="video/mp4">
+                                Your browser can't play this video.
+                                <a href="/public/videos/eram/shot7.mp4">Download it instead</a>.
+                            </video>
+                            <figcaption>Viewport capture</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="../assets/7-DS4gMr-e.png"
+                                alt="Blender scene setup for shot 7"
+                                loading="lazy"
+                                decoding="async">
+                            <figcaption>Scene setup</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="shot">
+                    <h3>Shot 8</h3>
+
+                    <div class="shot-media">
+                        <figure>
+                            <video controls preload="metadata" playsinline>
+                                <source src="../assets/shot8-C7NxTpkm.mp4" type="video/mp4">
+                                Your browser can't play this video.
+                                <a href="/public/videos/eram/shot8.mp4">Download it instead</a>.
+                            </video>
+                            <figcaption>Viewport capture</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="../assets/8-B-724FW0.png"
+                                alt="Blender scene setup for shot 8"
+                                loading="lazy"
+                                decoding="async">
+                            <figcaption>Scene setup</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="shot">
+                    <h3>Shot 9</h3>
+
+                    <div class="shot-media">
+                        <figure>
+                            <video controls preload="metadata" playsinline>
+                                <source src="../assets/shot9-BFfXLn0J.mp4" type="video/mp4">
+                                Your browser can't play this video.
+                                <a href="/public/videos/eram/shot9.mp4">Download it instead</a>.
+                            </video>
+                            <figcaption>Viewport capture</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="../assets/9-CIEOiTGn.png"
+                                alt="Blender scene setup for shot 9"
+                                loading="lazy"
+                                decoding="async">
+                            <figcaption>Scene setup</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="shot">
+                    <h3>Shot 10</h3>
+
+                    <div class="shot-media">
+                        <figure>
+                            <video controls preload="metadata" playsinline>
+                                <source src="../assets/shot10-DaFEV1tN.mp4" type="video/mp4">
+                                Your browser can't play this video.
+                                <a href="/public/videos/eram/shot10.mp4">Download it instead</a>.
+                            </video>
+                            <figcaption>Viewport capture</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img
+                                src="../assets/10-k-KifI28.png"
+                                alt="Blender scene setup for shot 10"
+                                loading="lazy"
+                                decoding="async">
+                            <figcaption>Scene setup</figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Fullscreen layer for the model viewers (same as models.html).
+         Kept outside the wrapper above so animations.ts leaves it alone. -->
+    <div id="fullscreen-backdrop" class="fullscreen-backdrop"></div>
+
+    <div id="fullscreen-controls" class="fullscreen-controls" role="toolbar" aria-label="Fullscreen controls">
+        <button id="fs-toggle" class="toggle" type="button">Pause</button>
+        <button id="fs-minimize" class="minimize-btn" type="button" aria-label="Exit fullscreen">
+            − Minimize
+        </button>
+    </div>
+
+</body>
+
+</html>
+```
