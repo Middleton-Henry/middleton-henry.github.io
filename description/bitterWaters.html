@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Siren of Bitter Waters - Description / BTS</title>
+
+  <script type="module" crossorigin src="../assets/app-header-Cu5nXzn-.js"></script>
+  <script type="module" crossorigin src="../assets/back-link-Co5wQpVb.js"></script>
+  <script type="module" crossorigin src="../assets/description-C_9yLn8S.js"></script>
+  <link rel="stylesheet" crossorigin href="../assets/app-header-caoLWeQ0.css">
+</head>
+
+<body>
+    <app-header></app-header>
+
+    <!-- .animations-viewer gives the audio card the same frame styles as soundDesign.html -->
+    <div class="sound-design-description animations-viewer">
+
+        <a class="btn" href="/soundDesign.html" data-back-to="soundDesign.html">← Back to sound design</a>
+
+        <!-- Podcast audio: cover art fills the frame, the player sits along the bottom -->
+        <div class="media-focus">
+            <div class="media-frame audio-frame">
+                <img class="audio-cover" src="../assets/icy-BMO1-tT6.jpg" alt="Podcast cover art: icy water" decoding="async">
+
+                <audio src="../assets/SirenOfBitterWatersPilot-BI5Zlczy.mp3" controls preload="metadata">
+                    Your browser does not support the audio element.
+                    <a href="/public/audio/SirenOfBitterWatersPilot.mp3">Download the audio</a> instead.
+                </audio>
+            </div>
+        </div>
+
+        <!-- Music credits -->
+        <p class="description-note">
+            Music taken from the
+            <a href="https://vgmdb.net/album/107680" target="_blank" rel="noopener noreferrer">Hello Charlotte EP 2 OST</a>,
+            composed by Etherane and Kai Engel, and
+            <a href="https://www.youtube.com/watch?v=KgKKcz5sjSY" target="_blank" rel="noopener noreferrer">"Subways of Your Mind"</a>
+            by FEX.
+        </p>
+
+        <!-- Script -->
+        <section class="description-section">
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="script-dropdown">
+                Script
+            </button>
+
+            <div class="description-dropdown stack" id="script-dropdown" hidden>
+                <p>The pilot was written in KIT Scenarist and edited in Audition.</p>
+
+                <iframe
+                    class="pdf-embed"
+                    src="/pdfs/SirenOfBitterWaters.pdf"
+                    title="Siren of Bitter Waters script (PDF)"
+                    loading="lazy">
+                </iframe>
+
+                <div class="media-actions">
+                    <a class="btn" href="/public/pdfs/SirenOfBitterWatersPilot-script.pdf" target="_blank" rel="noopener noreferrer">Open script in a new tab</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thumbnail -->
+        <section class="description-section">
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="thumbnail-dropdown">
+                Thumbnail Image
+            </button>
+
+            <div class="description-dropdown stack" id="thumbnail-dropdown" hidden>
+                <figure class="shot-figure">
+                    <img src="../assets/waterNodeTree-1ia63lLJ.png" alt="Node tree for icy water thumbnail" loading="lazy" decoding="async">
+                    <figcaption>Shader node tree for the icy water</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

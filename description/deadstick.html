@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>DEADSTICK - Description / BTS</title>
+
+    <!-- Builds the .model-embed viewers in the Models section -->
+  <script type="module" crossorigin src="../assets/app-header-Cu5nXzn-.js"></script>
+  <script type="module" crossorigin src="../assets/back-link-Co5wQpVb.js"></script>
+  <script type="module" crossorigin src="../assets/description-C_9yLn8S.js"></script>
+  <script type="module" crossorigin src="../assets/ModelPanel-DcSUaDVR.js"></script>
+  <script type="module" crossorigin src="../assets/modelEmbeds-BllI1exf.js"></script>
+  <link rel="stylesheet" crossorigin href="../assets/app-header-caoLWeQ0.css">
+</head>
+
+<body>
+    <app-header></app-header>
+
+    <div class="sound-design-description">
+
+        <a class="btn" href="/soundDesign.html" data-back-to="soundDesign.html">← Back to sound design</a>
+
+        <!-- Title -->
+        <img class="description-logo pixelated" src="../assets/title-Dji4lkEP.png" alt="DEADSTICK title">
+
+        <p>
+            DEADSTICK is a fishing horror game built in Godot. The 3D models were made in Blender and the
+            music and sound in Audition. Gameplay is scripted in GDScript, and the visuals use custom
+            shaders written in GDShader.
+        </p>
+
+        <!-- Gallery -->
+        <section class="description-section">
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="gallery-dropdown">
+                Gallery
+            </button>
+
+            <div class="description-dropdown" id="gallery-dropdown" hidden>
+                <img class="pixelated" src="../assets/thumbnail-DO2KWA_9.png" alt="DEADSTICK title card with stylized ocean backdrop" loading="lazy" decoding="async">
+                <img class="pixelated" src="../assets/example-Cqrqe73E.png" alt="Example screenshot from DEADSTICK" loading="lazy" decoding="async">
+                <img class="pixelated" src="../assets/boat-VYPLi94V.gif" alt="Boat animation from DEADSTICK" loading="lazy" decoding="async">
+            </div>
+        </section>
+
+        <!-- Shaders -->
+        <section class="description-section">
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="shaders-dropdown">
+                Shaders
+            </button>
+
+            <div class="description-dropdown" id="shaders-dropdown" hidden>
+                <iframe src="https://www.youtube.com/embed/Zyvvb2Of9NU" title="DEADSTICK shader video 1" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/DaYz5c_pdqE" title="DEADSTICK shader video 2" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Models: live 3D viewers, built by modelEmbeds.ts from modelConfig.ts.
+             data-model must match a model's name there. Each loads the first time this section is opened. -->
+        <section class="description-section">
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="models-dropdown">
+                Models
+            </button>
+
+            <div class="description-dropdown" id="models-dropdown" hidden>
+                <div class="model-embed" data-model="machetefish"></div>
+                <div class="model-embed" data-model="pufferfish"></div>
+                <div class="model-embed" data-model="parafish"></div>
+                <div class="model-embed" data-model="panopto"></div>
+            </div>
+        </section>
+
+        <!-- Audio: a title card and player for each track -->
+        <section class="description-section">
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="audio-dropdown">
+                Audio
+            </button>
+
+            <div class="description-dropdown" id="audio-dropdown" hidden>
+                <figure class="track">
+                    <img class="pixelated" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAABaCAYAAADn765xAAAAAXNSR0IArs4c6QAAAf9JREFUeJzt3cFWgzAQBVDw+P+/jAtOV61KwsuQlnvXStKRvDNNQ10WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+BBr1UDbtm1VYx306rWPmONjnJHXfnjXMf4a88h4V9ThqNb5j/75lt9rlZjXK6evta41UfdVMgrADQhUgBCBChAiUAFCBCpAiEAFCBGoACECFSDku3CsnsPXvQeFRx4+b53TLNdOjVHxd6ww45xmo0aNdKgAIQIVIESgAoRU7qFCj7Iv8IGzdKgAIQIVIESgzsXRlDpqTZw91Plsy75vaO9wPLUmSoc6J91THbUmRqAChHjLv2vpUno7mrVjHG9F+6j17yru9dvSodZqXbRu6H5qTTmBWs9Cr6PWlBKo78FCr6PWdBOo1+jZr7PQ+6g1ZQTqdSz0OmpNCYF6rbt8sjwDtWY4gXo9H5zUUWuGEqhzsNDrqDXDCNRdy/Pc6zLm+W8Lvc6daz3Dvf6xBCpAiECdi06gjloT51n+Okf/3XLrc+g8U2suoUOdk+6pjloTI1ABQgQqQIhABQgRqAAhAhUgRKAChDiHOpeKM5HOXe5mqkPrXGaa+xn/vY6WI23Ja3XToQKECFSAEIEKECJQAUIEKkCIQAUIEagAIQIVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAj/EDF8FDctlO2PwAAAAASUVORK5CYII=" alt="Title card for Mason" loading="lazy" decoding="async">
+                    <audio src="../assets/mason-DtgBd2vb.mp3" controls preload="none" aria-label="Mason">
+                        Your browser does not support the audio element.
+                    </audio>
+                </figure>
+
+                <figure class="track">
+                    <img class="pixelated" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAABaCAYAAADn765xAAAAAXNSR0IArs4c6QAAD51JREFUeJztnety5LgNheVU3v+VnT9RlovB5eBGUht8Va6x22oSokAQOOiZeZ5hGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIav8xN94+/v7y84Pnfd+3p4/iSI7c9zzj6Lr9v/PH/dw802DsPz84O76L8r533+vtGlYPoor++Azq0F/Rv5sv2IP9xo9060vXHD2lj+dzpZQpDWOG3zv7IDLNzuCBo/zPe/z9nA7+EL9ltB/+fRD+H/J6T98st8neYNnl95fpp96TWtCKjcw9cW9rbg+i7iVxyC8gX7uayG2joSwF9Yycn79V6765nfWHFGWNePI3w/FQGVm5y+xm2ck9DFXJ3zC3zNfmrvGgTW8vCWrOsU1r1LycvJg3S16SuHIuJnofWsLPlfrMX8IX/u5mvBiPJF+zWNlAsG/8+B1cqenufP9blBs7w9mKI+lbK/o+RHF/b0hvlCINL4iv1StUIzKySQ/NN51wMtrdf1k97H/V7SYqt86TaflA6cH+YrdThVdPmlzr7mFB6D0WaXpylGbdA+2pWlQ0veaX8XyD1Ex7XwbhyvbTsOBuT5cntRaw5G7H7X0btG2ieCpOeDziHdh6TbS9e4g2tHyf8YRlincAR645bgzD3ADrRsPboGHfZL2UpH9kLnrYZmHNq8mfktH+s6zNbnb90nhV5LtevIwfFDvkfG0Hos3M/cvF6kxmi0wmap/BzqirYgFY4mBShkjl1lJXoSek/BHfZ3ZY87QCoCb1YVzfa7tE16IHgz7YhcpMkJ0vWIXdns1hpD24froeQN6ixdAbUL6gi0VLll4yMP/FZb19ctqQQdW3L4nZopDaLZYMJx4yEkVTO32HeLHSVkAyptKiCpemYBkVPImsd70nrx2LK+J6PndTplqgQiY0R+XxF0JY2uCi2QVmepnsNZksGy947u9V1Y/mPtGWT9IDIB1ZsdZoTvDIieK13vtZUrJbUN1eHYGfspXIlY9fyonRUBzsq2q/TgU5UR2pvo8rd1nI5DaadOjxw2bn/vakpRdgdRT9bcgdQooM0fT0PhNF0NHG7s6JpYjaLM2NxYayMHmRtB61BLr1fNfZIqH4jOF+ln/MGugHqCU8HU4xg3O/vJQF+9Lh3aplVmRg5LSWem49D7kQ7orqbYO3bm9y80U0TXLXPotu3J7qZUl2ZaQWfAWB3Z0u7W8umGbj9XCkWfg1djl+zIzt1VsUgNn3dOqYOsjUfhMmC0kdjZJFt91js2d0Cs2b52nfYzCmJvyFd2ZKi3lbS3dTm9VNovifX0i87tGT+qv1bcX4dO2w23TpbtJ6SjbKIkySZSlspdr/nqSmRtQvfXGVCrurNRMllBBTQQaZuiU5+8iUod8wZoA4NubG2ToyCNR82v0GzMa1Pm/TuRArN07ZUaakdHtfI9a9a0M2tZH1jGKTvsR+bPlHYRXTF7bzTgUTsqA4FUakeQJKOHeS17GP8w33veH7FBmsfKNhFJICuvZCqyVg21ylm5RUQEcdQh3zGzoA9SOmg8JXGX/R1lsdRoQajOfKxsLzNu5vfc9VZW6qXr2WbKaStb1H6HxgXUxhJf68pQaaSvOEW9p6GlqaxflgZTTcXm6LK/I4hRohupgq4M9R2bzvM8+LNZAw21j9tPnj32Bf2Y4vETr5zUst+7/3GUqsaJ9+Z3Nz+kOSXtlG6EzOaudIpqJ4topl/c+C800FWVwtbvuvaGNl/U1vWaqN9r94tUINJBleYrn0PldMesg3GbPdsE82RjWgaCzveO8zDfR+jI2t4g3TH2rVRKSFJyQrPZLjs6oFVVZN+sPqX5FiL5lQXVrwRUTt+LamHaGFQU78yWopJIp/3V90xlifW1buiG68IraUTGo2NzCQYy5g45xXNtNkP1+npVli9SGVClbKurOcXNXSk+V9ldvaG77Jf0P0rE8dYDUWpSVWqbktRSgaTdUaLrtM5BM7iIpLArmD6PX+qQgqHWM/FWO2gVWLI+lV3+1RmqHZlmONIio6W+ViJV6l9IWe59kF320zkqkLJp7h6iFYc1t6X3RcbtDNZrwKCJyS/5k76XQwtWKNF7Rcr5U70DruJN+0l1yW81YKJY5XGVg3eV+LsaLbc3dLzNqY7AnmENRl0ZH1cp0IPZ4+/re6h2maEioL3jSElA5XojfZi0n9yuoaJ6kRRkI9d3lOfVGU2n/dX3T8t4LkOSMvls9lIp27zjVlQuFjTA0Mojkk119AQyPiclXlIfgJb6XnmIu3cuU06tU/UH+7semPRz5ZwVpfKKJk10kLXfKmWjh4I2Hvf9+rN3vTqqI20cxLaIDbS8p6/R8S07OB1xh6ZqgfgUooFKeisyJmoHREeGyj2ozMOjDQ3u9JLeh86taZLVdGlvntd34WlO0OujgSjyu8i43fIKt8ml1yS4rO9hXovKANr1VYcNcr+I7TQD/X30QBx6vjs01Iro73GiyNwdm6M604vMFUXLHr8Cl8lpAUZjLTdpmevJsJB51j/RYFkxt/d6Wm5X6JFUIrLmiIy/fo9KijBf+0/6Xqj2IT28W5o02czrJJVSCFrida5RRebLaW/a+7rvSUKTA3ZLUhprBaph7fvjh/8X/wuUirE6S2REKM9usAr7M7qgB0QDe38n6YQVcyOvS9Dslv6uCuoXdC1oRhU9qCX/26VXZw4obn+9r6FVB6dRl5T9OwJqp8NVywmcA2fGex6+bKlck0r7K8tX+j7anY3Mj871jiUFjeg8nmBPdX8UulYefRkNCp7+QjbwomO+40rzUYklGtClhl8Ju/7F/uqgimSBGtxCdpULqwDOZRWZoN1hv+ZkXlu54IaWdtH74d67q/KgdkTm5taH6nzcmB77aHA6Xir/F+sARA4S5F4y2b3KVzRUrgFAT5pI4JYWNeNg3GaOBk6LDvsriWzYdb0yQVX7eZ3LOyZ3MHLjZiUd74b3rJe0PsgYWhYZ3YfeuarHLpvnKxoqUsqcEtQtqF1SwL2FaBmIvkcr6SoyB0lfqxoTDW7R+bzSiNfnI9cjVaFHhrDmi77XS7bS/YNdH+y/NdhRvmCjRtZ+2hSqyLS4sSu0agkpK/7Ks5XWiLtupVOy4rCCPeo7WmYbrTojlUfJeN0ZamX2ZZVYXMPqJFJQuikbPcEX7/+EzcjeQQ4lug+iuqk0jsTtz9k6eEPxY1dTqiq4SWOh3c11HO7naifgMj46f1VZGx1rJdo5tcbr0pCtudcv6TUPiH5aBZKBcj0F1LZIJscFVWtObQ6t4VSViCDPXltbV+y6/b+RXseiDkOd25OdcmVtV0bL2eg9ALhrq+3fXTJ2geiO0TF3HAxSwOaCALcnrPdlqL73jL6K+quWzHB4mo9/0Pl3+WlmkIHepPQadz069g46gtbtpdXKDhkG1e0yY64+d0JaWgOpZ+NztqJNJ2ucSqTGIpKxSln0+rO2DusY7kSlI6BWl400iHozOc+1nVlqtxNm7Jc2JBc0MvfRHfwRzTEbCGlWeCpr42QeLVis12Z9EfW1qDyiJVDoeyV7vBXd0Qy1auNRUAE8MueuDIMeBlVrlQkMVqCvOAw7ru0cwxq7s/HJbXRJd1993goQ2mEZxRNUI7+Xkiev3TQZe+22ZJWQ73eX/JVjdmU3nZnpO/5jzJG5t6j9nEgvBdhsQ6D62s4x0LE7fBJdexpcuT93YJXdWlBE40S24pWy3YxMKFIdUDtE+/VUQa6NBpcqpE7i8/Abgb4enTOCpTdJc3UcQB0Z6g6ppRpuYyP6oXSf1YckMpcVBDulOw5O8kDkITdd/+tpJVKppZUKCEgnNcJaSrc8tP9SYb8UHC2H78omvc0RZMwvNe1W1oYThTs4pAyLk5qyayI9O1rt7EKbK1Ixe5K4v3H7/yn1PPgm8TYbrICsZZoSSNklaWRequyPbK7sGkt2ZMtWrunUlaV2ZOqo33ABskNqQ0Cz0si4658ansPf05Ry38PtAVUri6VTFy2lpUWtLD21DGM90SPOl7G/o0mhzePRj7XMDJ2T+kOn/l6JR0OleiC6bp71RSqs7PpmK03PfUhx4mF+7xn/f1QG1A6nlU5lZG6ktJGy38y9ICd11VpV2u/JuLzOLl3/lUB3Cm3zr4HRe3hUSVseWaLKFiux0q5H44HnPX/j9gz1BTlRIxlNd3PFCqbZ+TtKTmutv9jouQFvJrW+T0oOuACqNYyqsMrmCr+ukjCsRIHqvimp6CsBlRPWkfeg11YhNdC0wHpbcJIcOHpq/zBfqA23HJLR+W56th2abyefrDJu/wemPaWidm1Wp/FANa1Ox6gc29KhJa3TwsqgtBIuwsmNSJ931Ba6tl45Rip9qW0ZnVob/9QzsHoD1vNJ2317hkoX4yugjnXTKaxtkmzTYf2i5RVdq2pJoVuiQNbGOz/anPKgJSHoM0buo2utM+Najb2yeW/PUJ+nTkvhxuVK87AgHbg++p7n6bFfGz+DlA1xB0+FFNLlMxqp7vDyHiTDrbovr43d6+n5NIh3XOpXLffSEVCry9zuTw/QeSo2Rjfd9ndJFZo+W9msWzfPbq2aZvWR7LQrcFVJEh1Yja6K8Z/HvueUz+z416ZuGUsbu+ohot3E91pvs4aOh8zrYXU6SYeLzGeVsOt8XRsqm+FExo4Ex0zF0jW2h6h00CGdROZAPuki0qWh3pjVaVRuiBNU2G+dzBVr0VXSZee+Be4g8zSjThO11fvpjy7WhCI0V1dAPf1wrawPPQ0r7kPKvH6fvz84z1w77a9GeiY3Bzyre8y9Ful6c88MKVEzlU4lN/rbinZYlchOlRpqp/aBONWKtjAeOytEe00XigjkXfZ7PgrTmal+BUurjmxOrx9ImdQt60v9x5J1aICjVCU4Xc3Q67v8WjC1utmrw+1uSLzfv1hd7pOgB9YNtnqhzakOP7DG9MyN2pfVmzmbuL1SoZVbVaKUGf4yv6uiLR7cHlC1DaE9/LAGUoAU6L1Z9i6+8KmGLJXBVOqUS9XG6YOIs+v0J1q81Q4XWK885G8PqFoZRaGn3MnFRjZwZ9Y0/ElmrddnJfnVzY3N0/NnkaS067j9b0rRxo3FLcEJKX0izahTVOqnXyT6rLo/CvZPAEk8PsPtARUBKWVOQ6WJtRu722GiQeELaPeWvQ+vvvk8d/ihRxc9Ya/VvLthDWG+VvJHrzkF14lNfzRjM19y6N2fNEGbpqeQAukNtnFYsoz1u+O+entA/Sdwq/MOPjyfn51nruNJlGbdh2EYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYhmEYsvwHBa2lwaPBBzkAAAAASUVORK5CYII=" alt="Title card for Dreams" loading="lazy" decoding="async">
+                    <audio src="../assets/dreams-D0fTM1g_.mp3" controls preload="none" aria-label="Dreams">
+                        Your browser does not support the audio element.
+                    </audio>
+                </figure>
+
+                <figure class="track">
+                    <img class="pixelated" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAABaCAYAAADn765xAAAAAXNSR0IArs4c6QAAAzBJREFUeJzt3Mt20zAUBdCExf//chiwoDQt8UPXvjrx3hMGxNWxLJ+6jZrbDQAAAAAAAAAAAAAAAAAAAAAAAAAA4Bz37gBbPB6Px47D/j3H745/noOl14xmWLIm456vseTPGN1zvHX8V2Mfsb6r5+e7jP97zZ6xl8bfcnzL+Pf7PaanfnQHAHgXChWgiEIFKKJQAYooVIAiChWgiEIFKPKzO8BGW/eMnmFNpm5bMi691vx+1p2vYvyRfaKj43fPXylPqABFFCpAEYUKUEShAhRRqABFFCpAEYW6TcKWjoSMqdLnNj3/9BQqQBGFClAk7S+lEiR8unhCxlTdczs6fvrxrTyhAhRRqABFFOr4O58J75x2ZxwZvzv7kur1M/v5PrvC/bOaQv2tYlHMvjC6M46W6szzO5rvces9x6r8XcdPQ6F+qLigCYuiu1QT5miv9HPrftpMnz+F+mTpgia8A5mQca/uG27N3HZn3PJZt1uPHx3/jONbKdTtlhblDAsiIWOqs7cFVX+DHPl6a4/tLvU2CnW7hIudkDFVxdyuLaa95fcq42j+++3ie01fUahwvrWlNvPuiNGfgt7ypyiFCufaWhQzl+rR43fn30yhwns7spRGfx/6dr9PVajX+H1Qd8Yz3gjpMnu+NTqvzzvM318K9bcrLIrujKM3bXf+V2bOdoYr3D+rKNQ6CYsiIWOq9FLpzt99/iUU6oeKC5qwKDozzv6kOWrvud2f/u3SXYrd5z9MoX4Wf0FDjBbPzEY37nefY3cpdp//EIX61RUWxAwZ37lUR6Wf4xXuoW/5xP6vorZphEreW3mGWc/xu1zP5beU/fn/tx4/NU+oAEUUar2E77AJGVOlz216/lYK9RhHL0qLfr8z5i79+qTnb6NQjzN7qV75plGqy9Lzt1Cox0oo1aveOEp1WXr+0ynUfBb9fuaOUgr1eAk3bULGVOlzm57/VAoVoIhCBSiiUAGKKFSAIgoVoIhCBSji06bGJWwQv+rWl4RrM8P4nZ/+1T1/pTyhAhRRqABFFCpAEYUKUEShAhRRqABFFCoAAAAAAAAAAAAAAAAAAAAAAAAAAABAmF9gNpNdInZfogAAAABJRU5ErkJggg==" alt="Title card for Excess" loading="lazy" decoding="async">
+                    <audio src="../assets/excess-IqAF0qVH.mp3" controls preload="none" aria-label="Excess">
+                        Your browser does not support the audio element.
+                    </audio>
+                </figure>
+
+                <figure class="track">
+                    <img class="pixelated" src="../assets/cleansing-En-RyNjg.png" alt="Title card for Cleansing" loading="lazy" decoding="async">
+                    <audio src="../assets/cleansing-CS_VNS9V.mp3" controls preload="none" aria-label="Cleansing">
+                        Your browser does not support the audio element.
+                    </audio>
+                </figure>
+
+                <figure class="track">
+                    <img class="pixelated" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAABaCAYAAADn765xAAAAAXNSR0IArs4c6QAABYhJREFUeJzt3NuS2yAMgOGk0/d/5fQqUy/LQRICBPzfTC+6MRhjLGMDfr0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg815dgBE+n8/qIiCmtGEc2f4FwtTD+33WKfi7ugCT9ETYdyN9q0WU0rbyle4vl4emlXqXryRXplb+kmOt5Z+meSd//2T+XksvYW0PaXpr3UuOxbMepG2tN/0W/qwuADBJeuFKL+Tcdu/Hv1Tvzbs3j5JS0EyDKzocdXf4qjzyl3orpW2e2/U8JrV6AK1ySfY9onytPGu/S+q6d9va9tpel6Z31qp/Sd3XttecS8050vZeW/tqbd/cD4/8e+ptVNqL5Zmu1JOx5DsjkD7/1nsDGBVIJUFUUw/am2ttu57j8Kq3nuCu2cbzWjgCj/w/nXCyPR7beutBm96j3k95XPVsg155nVK3wxFQ854v6nvy8GrQIwN9T94Rb0CWMq0IGNa6a5VV2svViniuwyGg/rZjw4nYq5nplB7Uip59mo+mLk+pdzc7XjxNgkEpy7sfax6Snmpvns//W96pWnvTXr0hTT7SwRzrYEkr31relnepuX1Fr4fclDpT2z1tUIoealvPGecODi2vQaTRNHOEr0FA/U/bIKTbe/Xeanm+K7/d2NDP6vbUrTzWm+pZhIB6jhsD59Ptxz8Cdap0a0CN2lC8yjW7lxq1Pq0iH4+mbJYeZM/AWOR6m+LWgNpjl8ecnsGIG+1yXp92LPPRCKh9dgpCO5R1hzJ6G3nMHh9YSUf9WyP8HnO4t3VbQL3tjj76eG+rz9WuDVS7uC2gtlhG7ktpVjR+6Sqa1E6BsVTW0avJotVR9PJcGfwJqLGNWJd/Q0P3OMYb6gnObvnaVE7vBfN8l9S7bj/NKyXJP/duS/KbF69vF2iXPnovu7XWEwH4d/3lzs+78Pcj3BxQbxatQT8vxB1WCrXqL1LdetC0lxk377BuCqilNcrW9f25vCz51b5JKs2n97urlgDbs17cmk/rHPaURZJ3Lv+eb49q24gkjcf3FVr7k7Sz3HbHfxOVd6jlj4pI0mjT1XgFKM1+drNqQOrpk/z7bjOqDJFeQbSmRN34vv4HAmpcmgtU8n71acRgVxQRZ1d4iVrnGkcH2ZsCqvc7r2iNu9VQo5V3V6XeaJRAsfo8X91LvSmgjmT9NqQl7+j5aq0OAFq97yhnHu+qc7zi1UwItwxK1S4Cy4vy3PtObT5eA0XS/XqUOc3L69OEmsGcVu/Qc3CttcSy9FtrX5pzJc07TTeiHnrKcfyA1OtFD9Vq9y/sjBhImyVKfc8KDEcHoNMQUOsNduTFqx1I+vL44EVPPifxnFkR4SYVMfhe1c4IqHu5qnEqRAwkHrzmks526vloIqDmaT9BNnPlUe8SV/iJUJ/e3y0YcUzXdAQIqHZRHhHxk6VevYJIhHMaIci/XnHKMRUBtS5So/C6WL0/JjKb15Qc7cq4GVOBZq2Ws+wz0rUQ1unTpqzTcqxryjVlkqYtHYPXdC+NaNOlVucnrc9Wftb1/bnzry17q9zWqU4rbg7LHXmgn8+Pzoe20be2y6UZ2eA85wdq9+2d1pqP57bWuaC1NJJ5o9Jy1fZTStMqV089fLe1nuvqcb3fZ4WgW3qoXtvl9AZT6za9ZbakT9NYLzRNPtp9PieSa4JiaX+Sfaf12Spj+rv1qaW1/bdcpWPS7Kt34PWsyFlwakAtNaDVgwY95aotJpgxy8B7NDn3m3SurOR4czeNmRf1t4w9x1BKp2Gth9x+vF75AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAo/wAAaGp1pCxZ0gAAAABJRU5ErkJggg==" alt="Title card for Event" loading="lazy" decoding="async">
+                    <audio src="../assets/event-DzOhSNwU.mp3" controls preload="none" aria-label="Event">
+                        Your browser does not support the audio element.
+                    </audio>
+                </figure>
+
+                <figure class="track">
+                    <img class="pixelated" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAABaCAYAAADn765xAAAAAXNSR0IArs4c6QAABYJJREFUeJzt2lF2ozgQQFE8Z/a/kV6k56PbZ9IJoKqSsAXc+9cdJAQOzxhnWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgXo+jd/B8Po/exSyqB/r1NXhu/H9rX1tzZPffsrffjNYaq8c+YrvMWjKq+xl9vK31RI438zs2ar6e405v83g8Sq/7v5VB/CCmtTl6x4+8yI5ydCwy221tHx23N7aqZ75DYrqxTYig9hHS/PiWaPwqF8aR56m6n54LfPaQVj8VtOaZLqQvglonprmxVZ+KacWIfVwlpqPmOU1Ml0VQK4Q0NzYqEsDshTFqLS3vCkVmu63to+P2xraMejPbey1HvakO/R5JUHPENDc2Skxja8i8NnvrEtPtebr8M3rCCxPT3NgoMY2tYVRMI8S0yB1qjJjmxkaJaWwNI2NafUTQ8omYRn5fDnlWusUdapuY5sZGiWlsDWIa38dHY7os7lAjKmHMbp+JxMhfipEhrQYh+qXJiHPUey4rr+cZQzritaz+vrfmmTKkL4IaI6T5sUJaW4OQtn8W3eZtIX3xkb9NTPNjxbS2BjGNja3M/xbuUPeJaX5sz4UTnSdzHD3nL/P690ZSTNd/HnnznSKmyyKoW4Q0P7YnpNHz8K4LJ/v6t+bYm0dI139+qpC+COpPYpofK6bbc+zNU92uQkzfwDPUv4lpfqyYbs+xN8/omPbELbqdmDa4Q/2fmObHzva8tMcZYvpo/P+Ra5oxptOE9MUd6m9imh/bG9NIHMT053Zi2l7Hx9z5DlVE82NHRnTrfIroz+32ztdRaxq5v7W5vh/T1hzTR/Sru96himl+rDvS7Tn25rnzHenWXJVHQdPHdFnueYfaE9O1f29pfZyJvDtH3CGm0S+2IjKvZ+aLosjvhZjGztO0Xzq13C2ovTGNisZgb1yEmOZUX88Rc/TGdM/sMV37d9RpYros9wqqmObH9sZ0a5szxDQSiZ651ubbi+lRjxTWfj46plWniumy3COoQpofOyKka4R0fT4hbc99ClcPqpjmx1YuwOzzw1ljOnKOyPltHY+YnsyVv+UX0/zYK8W04og78a35WvsS0xO64h2qkObHXi2kvR/zR4Y0+/jkbiE9fUS/ulJQhTQ/tnrxRb/Zb+3jynekQrrvUiF9uUpQe2Ja/eXqCV7LHWL69d+jz+WnP3KvnaPKm4eYnswVnqGKaX7sDDHNbtfrkzHdc6WYPhr7aK3h9M4eVDHNjxXT2hrEdF/k2fqlY7os5w6qmObHimltDWK6T0z/OOMzVCHNjxXS2hruHtK17dbG3D6kL2e7QxXT/Fgxra1BTMU07Sx3qEKaH9tz8UUvkjuGtPotdyTIQnpyZwiqmObHXimmlddTTMftb22MmG6YOahCmh8rpLU1COn2MUYfA906pC+zBlVM82NHXYDfiemYeY5a07tiukdM/5jxSykxzY/tvQArdydimtvu7DHtje4tzBZUMc2PFdPaGsRUTIc7/IQ8n+HHTzPEtKUniJl5Rz2zOyKm1bW0VPbz6Zh+3zZzjluOfI67N19kv5cP6eNRO8RZnqGKaW1sdJ5Rz0yra2mZJabZeLTWPWtMe/Z7+Zj2+GRQRbQ2NjpP5s5ERGPzRPY5c0QjxyqiHT4VVDGtjY3OU41p1VVi2jqOmWOaXXt0v2Ka8Imgimmf1nO6npgeeZ6qjvqSZ4aYjjp/vWtf2yYyL9+8O6hiWh8fmeMMMR19zq4W09Fv0NW/vBDTgncFVUjrc0TG937E711LVGQ/PX+e1Nru0yGtfCyvzLM2V+95JeAdQRXTmp4/1anMecS4Ufs5e0wrAazOszZX9Hz9Cs4PAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwxX+jAr5xQMJCxAAAAABJRU5ErkJggg==" alt="Title card for Shadow" loading="lazy" decoding="async">
+                    <audio src="../assets/shadow-CJ1linFc.mp3" controls preload="none" aria-label="Shadow">
+                        Your browser does not support the audio element.
+                    </audio>
+                </figure>
+
+                <figure class="track">
+                    <p class="track-title">Finale</p>
+                    <audio src="../assets/finale-C_j1jFkM.mp3" controls preload="none" aria-label="Finale">
+                        Your browser does not support the audio element.
+                    </audio>
+                </figure>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Fullscreen layer for the model viewers (same as models.html) -->
+    <div id="fullscreen-backdrop" class="fullscreen-backdrop"></div>
+
+    <div id="fullscreen-controls" class="fullscreen-controls" role="toolbar" aria-label="Fullscreen controls">
+        <button id="fs-toggle" class="toggle" type="button">Pause</button>
+        <button id="fs-minimize" class="minimize-btn" type="button" aria-label="Exit fullscreen">
+            − Minimize
+        </button>
+    </div>
+
+</body>
+
+</html>
